@@ -1,3 +1,53 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+h2 {
+  font-size: 50px;
+  font-family: 'Dancing Script', cursive;
+  margin-top: 32px;
+}
+
+h3 {
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  padding-top: 40px;
+  color: #b68973;
+}
+
+ul {
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+}
+
+.show {
+  display: grid;
+  grid-template-areas: 'img text';
+  grid-template-columns: 2fr 1fr;
+}
+
+.text {
+  background-color: black;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  height: 577px;
+}
+
+.btn-general {
+  border-radius: 5px;
+  background-color: #b68973;
+  color: white;
+  margin: 8px 8px;
+  text-decoration: none;
+  padding: 8px 24px;
+
+  &:hover {
+    background-color: white;
+    color: #b68973;
+    text-decoration: none;
+  }
+}

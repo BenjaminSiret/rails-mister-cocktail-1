@@ -1,13 +1,24 @@
-<h2><%= @cocktail.name %></h2>
+<div class="show">
 
-<ul>
- <% @cocktail.doses.each do |dose| %>
-  <li><%=dose.description%> - <%=dose.ingredient.name%> <%= link_to "(delete)",
-            dose_path(dose),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %></li>
- <% end %>
-</ul>
+  <div class='text'>
+    <h2><%= @cocktail.name %></h2>
+    <h3>THE INGREDIENTS</h3>
+    <ul>
+    <% @cocktail.doses.each do |dose| %>
+      <li><%=dose.description%> - <%=dose.ingredient.name%> <%= link_to "(delete)",
+                dose_path(dose),
+                method: :delete,
+                data: { confirm: "Are you sure?" } %></li>
+    <% end %>
+    </ul>
 
-<p><%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail) %></p>
-<p><%= link_to 'Back to list', cocktails_path %></p>
+    <%= link_to 'Add an ingredient', new_cocktail_dose_path(@cocktail), class: 'btn-general' %>
+    <%= link_to 'Back to list', cocktails_path, class: 'btn-general' %>
+  </div>
+
+  <div class='img'>
+  <%# @cocktail.photo.key %>
+    <%= cl_image_tag("https://res.cloudinary.com/djpakoq99/image/upload/v1614943835/first-cocktails-app/Forest_jump_jtcxci.jpg",
+        width: 200, height: 200, crop: :fill) %>
+  </div>
+</div>
